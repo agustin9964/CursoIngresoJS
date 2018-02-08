@@ -4,6 +4,9 @@
 */
 function Mostar()
 {
+	var dato;
+	dato=prompt("el gato azul");
+	document.getElementById("elNombre").value=dato;
 	
 }
 
