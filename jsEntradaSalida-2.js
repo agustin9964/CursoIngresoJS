@@ -2,10 +2,10 @@
 y luego mostrarlo por 'alert' al presionar el botón  'MOSTRAR'*/
 function Mostar()
 {
-    var dato;
-    dato=prompt("veni gaturro")
-    alert(dato);
+	var dato
 
-	
+	dato=prompt("Escribí papá")
+
+	alert(dato)
 }
 

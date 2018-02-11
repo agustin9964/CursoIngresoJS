@@ -3,22 +3,32 @@ transformarlos a enteros (parseInt) y Sumarlos.
 Mostar el resulto por medio de "ALERT"*/
 function sumar()
 {
-    var numeroUno;
-    var numeroDos;
-    var resultado;
+	//crear variables de lo que pide
 
-    numeroUno=document.getElementById("numeroUno").value;
-    numeroDos=document.getElementById("numeroDos").value;
+	//tomar los datos por ID
+
+	//pasar el dato a número por parseInt
+
+	//sumar el resultado y mostrarlo con alert
+
+
+
+
+
+
+	  var numeroUno
+      var numeroDos
+    
+    numeroUno = document.getElementById("numeroUno").value;
+    numeroDos = document.getElementById("numeroDos").value;
 
     numeroUno=parseInt(numeroUno);
     numeroDos=parseInt(numeroDos);
 
-    //numeroUno=2;
-    //numeroDos=5;
+    alert(numeroUno + numeroDos);
 
-    resultado= numeroUno+numeroDos;
 
-    alert("la suma es "+ resultado);
+
 
 
 

@@ -4,9 +4,19 @@
 */
 function Mostar()
 {
-	var dato;
-	dato=prompt("el gato azul");
-	document.getElementById("elNombre").value=dato;
+	//tomar las variables
+
+	//usar el prompt para tomar los datos de la variable
+
+	//mostrar el dato por ID
+
+
+
+	var nombre
+
+	nombre=prompt("Escribe tu nombre")
+
+	document.getElementById("elNombre").value=nombre
 	
 }
 

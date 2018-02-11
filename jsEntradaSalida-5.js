@@ -2,22 +2,22 @@
 ej.: "Usted se llama José y tiene 66 años" 	*/
 function Mostar()
 {	
-    var nombre;
-    var edad;
+	//tomar las variables
 
-    nombre=document.getElementById("elNombre").value;
-    edad=document.getElementById("laEdad").value
-    
-    alert( "Su nombre es " + nombre + " y usted tiene "+ edad + " años ");
-    
-    //alert(nombre)
+	//tomar los datos de la variable por ID
 
-
-
-    //alert(edad)
+	//concatenarlas con la suma en alert
 
 
 
 
+	var nombre
+	var edad
+
+	nombre=document.getElementById("elNombre").value
+	edad=document.getElementById('laEdad').value
+
+	alert(" Usted se llama "+ nombre + " y tiene " + edad + " años ")
+	
 }
 
