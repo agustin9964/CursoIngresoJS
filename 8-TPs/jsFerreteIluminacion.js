@@ -11,93 +11,94 @@ E.	Si el importe final con porcentaje suma más de $120  se debe sumar un 10% de
 function CalcularPrecio () 
 {
     
-    var cantidad;
-    var marca;
-    var precioFinal;
-    var precio;
-    var porcentaje;
-    var precioBruto;
-    var descuento;
+  var cantidadLamparas;
+  var precioLamparas;
+  var marca;
+  var porcentaje;
+  var precioDescuento;
+  var descuento;
+  
 
-   
-    cantidad=document.getElementById("Cantidad").value;
 
-    marca=document.getElementById("Marca").value;
+  cantidadLamparas=document.getElementById("Cantidad").value;
 
-    precio=35;
-    
-    precioBruto=cantidad*precio;
-    
-    porcentaje=0;
-//punto A
-    if(cantidad>5)
+  precioLamparas=35;
+
+  if (cantidadLamparas>=6)
         {
             porcentaje=0.5;
+
         }
-//punto B 
-    else 
-    {   if(cantidad==5&&marca=="ArgentinaLuz")
-        {
-        porcentaje=0.6;
-        }
-      
-        else { 
-              porcentaje=0.7;
 
-              if(cantidad==4&&marca=="ArgentinaLuz") 
-              { 
-                 porcentaje=0.75;
-              }
-              else if (cantidad==4&&marca=="FelipeLamparas")
-             {
-                 porcentaje=0.75;
-             }
-             else {
-                 porcentaje=0.80;
-
-                 
-                    if (cantidad==3&&marca=="ArgentinaLuz")
-                     {   
-                         porcentaje=0.85
-                    }
-                    else if (cantidad==3&&marca=="FelipeLamparas") 
-                        { 
-                            porcentaje=0.90
-
-                        }  
-                    else
-                         {
-                             descuento=0.95
-
-                         }    
-                }
-                 
-
-        }   
+ else if (cantidadLamparas==5)
+    {
+      if (marca=="ArgentinaLuz")   
+            {
+                porcentaje=0.6;
 
 
-    }
-                    
-                              
-     descuento=precioBruto*porcentaje;
-     precioFinal=precioBruto-descuento;
-
-     if(precioFinal>120)
-        {
-            precioFinal=precioFinal*1.1;
-        }                   
-
-     document.getElementById("precioDescuento").value=precioFinal;
-
-
+            } 
         
-
-
-
-   
-     
-
     
+     else
+        {
+            porcentaje=0.7;
+
+        }
+
+    }    
+ else if (cantidadLamparas==4)
+    {
+        if(marca=="ArgentinaLuz" || marca == "FelipeLamparas")
+            {
+                porcentaje=0.75;
+
+            }   
+
+        else
+            {
+                porcentaje=0.80;
+            }    
+    }   
+
+ else if (cantidadLamparas==3)
+    {
+        if (marca=="ArgentinaLuz")
+            {
+                porcentaje=0.85;
+            }
+        else if (marca=="FelipeLamparas")
+            {
+                porcentaje=0.90;
+
+            }
+        else 
+            {
+                porcentaje=0.95;
+            }
+    }       
+ else 
+    {
+        porcentaje =1.0;   
+
+          
+    }                
+    
+    document.getElementById("precioDescuento").value = cantidadLamparas * precioLamparas * porcentaje;
+
+
+    precioDescuento=document.getElementById("precioDescuento").value;
+
+    if (precioDescuento>120)
+        {
+            descuento=precioDescuento*1.1;
+
+            alert (" usted pago " + precioDescuento + " siendo " + descuento + " el precio que pago");
+
+        } 
+
+
+
 
          
 
