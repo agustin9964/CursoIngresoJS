@@ -6,28 +6,22 @@ function Mostrar()
 	var respuesta='si';
 	var numero;
 
-	while(contador<6)
-	{
+	while(true)
+		{
 			contador++;
-			
-			numero=prompt("ingresa tu numero");
+
+			numero=prompt("ingrese un numero");
 
 			numero=parseInt(numero);
 
-			if (isNaN(numero))
+			if (isNaN(numero)||numero==null)
 				{
-					
+					break;
 
 				}
+		acumulador=acumulador+numero;		
 
-
-
-
-	}	
-		 
-
-
-
+		}
 
 
 document.getElementById('suma').value=acumulador;

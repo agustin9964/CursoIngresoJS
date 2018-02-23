@@ -1,19 +1,20 @@
 function Mostrar()
 {
 	
-	var cantidad;
+//el while sirve para mostrar algo  hasta que la condicion de false
+	var cantidad
 
-	cantidad=0;
+	cantidad=0
 
 
+	while(cantidad<10)
+		 {
+		 	cantidad++;
 
-	while (cantidad<10)	
-		{
-			cantidad++;
+		 	console.log(cantidad);
 
-			console.log(" su numero es " + cantidad);
+		 }
 
-		}	
 
 
 	alert('iteración while');

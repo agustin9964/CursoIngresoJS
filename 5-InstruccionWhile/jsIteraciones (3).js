@@ -1,25 +1,20 @@
 function Mostrar()
-{
+{// se pide una clave distinta a la correcta y distinta a valor null, para asi poder mostrar un alert y luego un prompt para que se introduzca nuevamente
 
-
-var clave 
+var clave;
 
 clave = prompt("ingrese el número clave.");
 
+while (clave!="utn750"&&clave!=null)
+	{
+		alert("error en la clave");
 
-    while (clave!="utn750"&&clave!=null)
-    {
-        alert("error de clave");
 
-        clave=prompt("ingresa la clave nuevamente");
+		clave=prompt("ingrese el número clave correcto");
 
-        
-        
 
-    }
-    
- alert("abrete sesamo"); 
-    
+
+	}
 
 
 }//FIN DE LA FUNCIÓN
