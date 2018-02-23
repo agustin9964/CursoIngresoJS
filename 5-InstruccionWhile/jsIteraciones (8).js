@@ -5,36 +5,35 @@ function Mostrar()
 	var positivo=0;
 	var negativo=1;
 	var numero;
-	
+
 	var respuesta='si';
+
+	
 
 	while(respuesta=="si")
 		{
+			contador++;
 			numero=prompt("elija un numero");
-
 			numero=parseInt(numero);
 
 			while(isNaN(numero))
-				{
+			{
+				break;
+			}
 
-					numero=prompt("ingrese un NUMERO");
-
-					numero=parseInt(numero);
-				}
 		}
-
-	if (numero>0)
+respuesta=prompt("desea continuar?");
+	if (numero>=0)
 		{
 			positivo=positivo+numero;
 		}
-	else if(numero!=0)
+	else 
 		{
 			negativo=negativo*numero;
 		}
-	else 
-		{
-			
-		}			
+	
+	
+
 
 
 document.getElementById('suma').value=positivo;
