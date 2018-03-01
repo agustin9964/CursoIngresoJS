@@ -1,19 +1,17 @@
 function Mostrar()
 {	// promedios afuera de while;
-	
-	var diferencia;
-	var promedioNegativos
-	var promedioPositivos
-	var contadorDePares=0;
-	var contadorCeros=0;
-	var acumuladorPositivo=0
-	var contadorPositivo=0
-	var acumuladorNegativo=0
-	var contadorNegativo=0
-	var negativo=0;
-	var contador=0;
 	var numero;
-	var positivo=0;
+	var contador=0;
+	var numerosPositivos=0;
+	var numerosNegativos=0;
+	var numerosCero=0;
+	var negativos=0;
+	var positivos=0;
+	var numerosPares=0;
+	var promedioNegativos;
+	var promedioPositivos;
+	var diferencia;
+
 	//declarar contadores y variables 
 	
 	var respuesta="si";
@@ -24,41 +22,51 @@ function Mostrar()
 		numero=prompt("ingrese un numero");
 		numero=parseInt(numero);
 
-		if(numero%2==0&&numero!=0)
-			{
-				contadorDePares++;
-			}//lave if (numero%2==0)
-
 		if(numero<0)
 			{
+				numerosNegativos++;
+				negativos=negativos+numero;
 				
-				acumuladorNegativo=acumuladorNegativo+numero;
-				contadorNegativo++;
+				
 				
 			}//lave if	
 	
-		else
+		else if (numero>0)
 		{
-	 		if (numero>0)
-			{	//llave if
-				acumuladorPositivo=acumuladorPositivo+numero;
-				contadorPositivo++;		
-			}
-		}//llave de else
+	 		numerosPositivos++;
+	 		positivos=positivos+numero;	
+			
 
-		respuesta=prompt("si quiere salir, ingresar no");		
+		}//llave de else if
+
+		else // como el unico valor restante es 0, se suman los 0
+			{
+				numerosCero++;
+			}
+
+		if(numero%2==0&&numero!=0)
+			{
+				numerosPares++;
+			}//lave if (numero%2==0)
+
+		respuesta=prompt("Si quiere salir, ingresar no");		
 		
 	}//while(respuesta!=no)
-	promedioNegativos=acumuladorNegativo/contadorNegativo;
-	promedioPositivos=acumuladorPositivo/contadorPositivo;
-	diferencia=acumuladorPositivo-acumuladorNegativo;
+	promedioNegativos=negativos/numerosNegativos;
+	
+	promedioPositivos=positivos/numerosPositivos;
+
+	diferencia=positivos-negativos;
 
 
-document.write(negativo);
-document.write(positivo);
-
-document.write("el contador de ceros es de "+ contadorCeros);
-document.write("el promedio de positivos es de "+promedioPositivos);
-document.write("el promedio de negativos es de "+promedioNegativos);
+document.write(" la suma de negativos que hay es " + negativos + "<br>");
+document.write(" la suma de positivos que hay es " + positivos + "<br>");
+document.write(" la cantidad de negativos que hay es " + numerosNegativos + "<br>");
+document.write(" la cantidad de positivos que hay es " + numerosPositivos + "<br>");
+document.write(" la cantidad de numeros pares que hay es " + numerosPares + "<br>");
+document.write(" la cantidad de ceros (0) que hay es "+ numerosCero + "<br>");
+document.write(" el promedio de positivos es de "+promedioPositivos + "<br>");
+document.write(" el promedio de negativos es de "+promedioNegativos + "<br>");
+document.write(" la diferencia entre positivos y negativos es " + diferencia + "<br>");
 
 }//FIN DE LA FUNCIÓN
