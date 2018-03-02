@@ -2,17 +2,21 @@
 function Mostrar()
 {
 	var importe;
-	var iva;
+	var iva ;
 
-
-	importe=prompt(" Ponga su importe");
+	importe=prompt("Ingrese su importe");
 
 	importe=parseInt(importe);
 
-	iva= importe*1.21
+
+	iva=importe*1.21;
+
+	iva=parseInt(iva);
 
 	document.getElementById("importe").value=iva;
 
+
+	
 
 	
 	
