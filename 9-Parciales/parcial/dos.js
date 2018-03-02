@@ -4,7 +4,7 @@ function Mostrar()
 
 	// se le pone el valor del prompt;
 
-	// se las hace enteros con parseInt;
+	// se las hace numeros con parseInt;
 
 	// se le da valor al iva;
 

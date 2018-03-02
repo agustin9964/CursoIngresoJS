@@ -1,35 +1,46 @@
 function Mostrar()
 {
+   //ingresar 2 numeros por prompt, si son iguales concatenados, si el primero es mayor que el segundo se multiplica
+   // si el primero es menor que el segundo, se resta 
+
     var numeroUno;
     var numeroDos;
     var resultado;
+    
+    numeroUno=prompt("Ingrese un numero");
 
-    numeroUno=prompt("ponga su primer numero");
+    numeroDos=prompt("Ingrese un numero nuevamente");
+    
 
-    numeroDos=prompt("ponga su segundo numero");
-
-    numeroUno=parseInt(numeroUno);
-    numeroDos=parseInt(numeroDos);
+     numeroUno=parseInt(numeroUno);
+     numeroDos=parseInt(numeroDos);
 
     if(numeroUno==numeroDos)
-    { 
-        resultado=numeroUno*numeroDos;
-        document.write(resultado);
+        {
+           resultado=numeroUno+"" + numeroDos;
+               
+        }
+    else 
+        {
+                            
+            if(numeroUno>numeroDos)
+                {
+                   resultado=numeroUno*numeroDos;
+                      
+                   if(resultado%2==0&&resultado!=0)
+                    {
+                        resultado=resultado+" es par ";
 
-    }
-    else
-    { 
-        if(numeroUno>numeroDos)
-        { 
-            resultado=numeroUno-numeroDos;
-            document.write(resultado);
-
-    }
-     else
-     {
-         resultado=numeroUno+numeroDos;
-         document.write(resultado);
-     } 
-
-    }
+                    }
+                    
+                    
+                }
+            else 
+            {           
+               resultado = numeroUno-numeroDos;
+                          
+            }
+             
+       }    
+       document.write(resultado);   
 }

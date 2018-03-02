@@ -1,23 +1,23 @@
 
 function Mostrar()
 {
-	// se identifican las variables;
-
-	//se le da valor por Id;
-
-	//se le da valor al perimetro del cuadrado;
-
-	// se muestra por alert el valor del perimetro;
-
-
-
 	var base;
+	var altura;
 	var perimetro;
+	var superficie;
 
-	base= document.getElementById('laBase').value;
+	base=document.getElementById("laBase").value;
+	altura=prompt("Ingrese la altura ");
+	
 
-	perimetro=base*4;
 
-	alert(" el perimetro es " + perimetro);
+	perimetro=base*3;
+
+	superficie= (base*altura)/2
+
+	alert("El perimetro es de " + perimetro);
+
+	alert("La superficie es de " + superficie);
+
 
 }
