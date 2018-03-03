@@ -1,7 +1,7 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	var importe;
+	/*var importe;
 	var maximo;
 	var minimo;
 	var bandera=0;
@@ -51,9 +51,56 @@ function Mostrar()
 		console.log(" el maximo importe fue de " + maximo );
 		console.log(" el minimo importe fue de " + minimo );
 		console.log(" el dia de mayor importes fue de " + diaMaximo);
-		console.log(" el dia de menor importes fue de " + diaMinimo);
+		console.log(" el dia de menor importes fue de " + diaMinimo);*/
 
-	
+	/*Realizar el algoritmo que al presionar el botón "Mostrar" pida el importe de las ventas	
+	(validar que sea mayor a 0,”cero”) 
+	de los 7 días de la semana por prompt (una por día)
+	e informar cual fue el mayor importe y cuál fue el menor importe de venta*/
+	var importe;
+	var contador=0;
+	var maximoImporte;
+	var minimoImporte;
+	var bandera=0;
+	var maximoDia;
+	var minimoDia;
+	var dia;
+
+	while(contador<7)
+		{
+			contador++;
+			importe=prompt("Ingrese un numero");
+			importe=parseInt(importe);
+
+			dia=prompt("ingrese el dia");
+
+			while(importe<=0)
+				{
+					importe=prompt(" ERROR!! Reingrese un numero");
+					importe=parseInt(importe);
+				}
+				
+			if(bandera==0|| importe>maximoImporte)
+				{
+					maximoImporte=importe;
+					
+
+				}
+			if(bandera==0|importe<minimoImporte)
+				{
+					minimoImporte=importe;
+					bandera=1;
+				}	
+		}	
+					
+		
+
+	alert(" El maximo es: " + maximoImporte+ " y el minimo es :" + minimoImporte);
+
+
+
+
+
 }
 
 	

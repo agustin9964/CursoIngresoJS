@@ -1,7 +1,7 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	var numeroUno;
+	/*var numeroUno;
 	var numeroDos;
 	var multiplicacion;
 	var suma;
@@ -38,10 +38,37 @@ function Mostrar()
 			document.write(suma);
 		}
 
-	}	
+	}	*/
 
+
+	var numeroUno;
+	var numeroDos;
+	var resultado;
+
+	numeroUno=prompt("Ingrese el primer numero");
+	numeroDos=prompt("Ingrese el segundo numero");
+
+	numeroUno=parseInt(numeroUno);
+	numeroDos=parseInt(numeroDos);
+//si son iguales, que los multiplique
+	if(numeroUno==numeroDos)
+		{
+			resultado=numeroUno*numeroDos;
+		}
+	else
+		{
+			if(numeroUno>numeroDos)
+				{
+					resultado=numeroUno-numeroDos;
+
+				}
+			else
+				{
+					resultado=numeroUno+numeroDos;
+				}	
+		}
 		
-
+	document.write(" el resultado es : " + resultado);
 	
 	
 }

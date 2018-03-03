@@ -1,7 +1,7 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-	var mesDelAño;
+	/*var mesDelAño;
 
 	mesDelAño=prompt(" Seleccione un mes del año");
 
@@ -16,8 +16,28 @@ function Mostrar()
 			 break;
 
 
-	}
+	}*/
 
+
+	var mes;
+
+
+	mes=prompt("Ingrese un mes ");
+	//mes=mes.toLowerCase(); esto sirve para bajar todo a minuscula
+	//mes=mes.toUpperCase();
+
+	switch(mes)
+		{
+			case "enero":
+			case "febrero":
+				 alert("Veranito!!!!");
+				 break;
+
+			default:
+				 alert("extraño enero y febrero!!!");
+
+
+		}
 
 	
 	
