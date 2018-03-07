@@ -11,8 +11,7 @@ function Mostrar()
 	// el resultado con iva es mostrado por Id;
 
 
-
-	var importe;
+	/*var importe;
 	var iva;
 
 	importe= prompt("Coloque su importe");
@@ -22,7 +21,25 @@ function Mostrar()
 	iva=importe*1.21;
 
 
-	document.getElementById('importeFinal').value=iva;
+	document.getElementById('importeFinal').value=iva;*/ //MOD OCTAVIO
+
+
+	var importe;
+	
+	var importeFinal;
+
+	importe=prompt("ingrese su importe ");
+
+	importe=parseInt(importe);
+
+	
+
+	importeFinal=importe*1.21;
+
+
+	document.getElementById("importeFinal").value=importeFinal;
+
+
 
 
 

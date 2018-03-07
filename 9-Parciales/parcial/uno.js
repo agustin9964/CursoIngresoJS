@@ -1,7 +1,7 @@
 
 function Mostrar()
 {
-	var base;
+	/*var base;
 	var altura;
 	var perimetro;
 	var superficie;
@@ -17,7 +17,18 @@ function Mostrar()
 
 	alert("El perimetro es de " + perimetro);
 
-	alert("La superficie es de " + superficie);
+	alert("La superficie es de " + superficie);*/ //EL MOD DE OCTAVIO
+
+
+	var base;
+	var perimetro;
+
+	base=document.getElementById("laBase").value;
+
+	perimetro=base*4;
+
+	alert("el perimetro es : " + perimetro);
+
 
 
 }

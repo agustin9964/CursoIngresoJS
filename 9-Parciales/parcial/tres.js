@@ -12,7 +12,7 @@ function Mostrar()
     // se da el resultado por alert ;
 
 
-	var largo;
+	/*var largo;
 	var ancho;
 	var perimetro;
 
@@ -27,7 +27,31 @@ function Mostrar()
 	perimetro=largo*2+ancho*2;
 
 
-	alert(" se necesitan "+ perimetro*3 +" metros de alambrado para colocarle 3 hilos a su perimetro");
+	alert(" se necesitan "+ perimetro*3 +" metros de alambrado para colocarle 3 hilos a su perimetro");*/
+
+
+	var largo;
+	var ancho;
+	var perimetro;
+	var metrosDeAlambre;
+
+	largo=document.getElementById("alrgo").value;
+
+	ancho=document.getElementById("ancho").value;
+
+
+	largo=parseInt(largo);
+	ancho=parseInt(ancho);
+
+	perimetro=largo*2+ancho*2;
+
+	metrosDeAlambre=perimetro*6;
+
+	alert(" Se necesitan " + metrosDeAlambre +" metros de alambre para dar 6 vueltas al perimetro");
+
+
+
+
 
 
 

@@ -2,7 +2,7 @@ function Mostrar()
 {
     //ingresar 3 numeros, indicar cual es el mayor y mostrar con un solo mensaje cual es el Numero mayor
 
-    var numeroUno;
+  /*  var numeroUno;
     var numeroDos;
     var numeroTres;
     var resultado;
@@ -36,6 +36,25 @@ function Mostrar()
         }
    
 
-    alert( numeroMayor +" y  el numero mas grande es "+ resultado); 
+    alert( numeroMayor +" y  el numero mas grande es "+ resultado); */ // mod octavio
+
+    var dia;
+
+    dia=prompt("ingrese un dia de la semana");
+    dia=dia.toLowerCase(dia)
+
+
+    switch(dia)
+        {
+            case "sabado":
+            case "domingo":
+                alert("es fin de semana");
+                break;
+            default:
+                    alert("a trabajar !!!");
+
+        }
+
+
     
 }
