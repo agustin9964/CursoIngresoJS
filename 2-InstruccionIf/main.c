@@ -3,18 +3,21 @@
 
 int main()
 {
-    char nombre [41];
-    char localidad [41];
-    printf("Nombre :");
+   int edad;
+   int flag=0;
 
-    scanf("%s", nombre); //se usa el %s en caso de querer hacer un string, sin ampersand
+   do
+    {
+        if(flag==0)
+        {
+            flag=1;
+        }
+        else
+        {
+            print("Error , reingrese");
+        }
+       scanf("%d",& edad);
 
-    //se puede hacer como ("%c",&nombre[0])
+    }
 
-    printf("Localidad : ");
-
-    scanf("%s",localidad);
-
-    printf("Usted se llama: %s y usted vive en : %s",nombre,localidad);
 }
-
