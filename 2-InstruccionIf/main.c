@@ -1,47 +1,20 @@
 #include <stdio.h>
-#include <limits.h>
-void main(void)
+#include <stdlib.h>
+
+int main()
 {
-    // AGREGAR EL PROMEDIO
-    int i;
-    int suma = 0;
-    int max = 0; // constante definida en limits.h
-    int min = 0; // constante definida en limits.h
-    int promedio;
-    for(i=0; i<10;i++)
-    {
-        int aux;
-        scanf("%d",&aux);
-        suma=suma+aux;
-        if(i==0)
-        {
-            max=aux;
-            min=aux;
-            i==1;
+    char nombre [41];
+    char localidad [41];
+    printf("Nombre :");
 
-        }
-        else
-        {
-            if(aux>max)
-            {
-                max=aux;
-            }
-            else
-            {
-                if(aux<min)
-                {
-                    min=aux;
-                }
-            }
-        }
+    scanf("%s", nombre); //se usa el %s en caso de querer hacer un string, sin ampersand
 
+    //se puede hacer como ("%c",&nombre[0])
 
-    }
+    printf("Localidad : ");
 
+    scanf("%s",localidad);
 
-
-    printf("la suma es:%d\n",suma);
-    printf("El maximo es:%d\n",max);
-    printf("El minimo es:%d\n",min);
-
+    printf("Usted se llama: %s y usted vive en : %s",nombre,localidad);
 }
+
